@@ -1,0 +1,7 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+# el directorio /dist que estaba incluido para gitignore se remueve para efectos de github deploy
+
+# Node
+/node_modules

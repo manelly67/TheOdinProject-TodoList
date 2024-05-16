@@ -1,0 +1,267 @@
+.container {
+    background-color: #500000;
+    display: grid;
+    grid-template-rows: 100px minmax(500px,6fr);
+    grid-template-columns: 200px 1fr;
+    grid-gap: 8px;
+    padding: 4px;
+}
+
+.header {
+    background-color: white;
+
+    grid-column: 2 / 3;    /* esta linea se asocia al grid de container*/
+	
+	display: grid;
+	grid-template-rows: 1fr 1fr;  
+	grid-template-columns: 1fr 1fr 2fr;
+}
+
+.newsButtons {
+    
+    grid-column: 3 / 4;    /* esta linea se asocia al grid de header*/
+	display: flex;
+    justify-content:right;
+    padding: 20px;
+    padding-right: 35px;
+    gap: 30px;
+}
+
+
+.user{
+    display:inline-flex;
+    padding: 15px;
+    font-size: 1.5rem;
+    justify-content:space-around;
+}
+
+.sidebar {
+    background-color: white;
+    
+    grid-row: 1 / 3;     /* esta linea se asocia al grid de container*/
+    grid-column: 1 / 2;    /* esta linea se asocia al grid de container*/
+	
+    display: grid;
+	grid-template-rows: 100px 1fr;
+	gap: 5px;
+}
+
+.sidebarPro {
+    grid-row: 2 / 3;     /* esta linea se asocia al grid de sidebar*/
+
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(0.5fr, 1fr)); 
+    padding: 5px; 
+}
+
+.sidebarPro p {
+
+    color:#ae0606;
+    font-size: 1.3rem;
+    opacity: 900;
+    text-transform: uppercase;
+    text-shadow: 1.5px 1.5px 1.5px white;
+    
+}
+
+.subSideBar {
+    /* este es un sub grid dentro de sidebarPro*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.subSideBar p {
+    color:#ae0606;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+}
+
+.tasks {
+    background-color: #ae0606;
+    padding: 15px;
+
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(0.5fr, 1fr));
+    gap: 10px; 
+}
+
+
+
+.formBox {
+
+    position: relative;
+    left: 10%;
+    
+    color:#ae0606;
+    padding: 15px;
+    padding-top: 5%;
+    
+    box-shadow: #fff0f0 2px 2px 2px 2px; 
+    background-color: white;
+    border: 2px solid #500000;
+
+    width: 55%;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+	justify-content: flex-start;
+    line-height: 30px;
+}
+
+.formBox >form > div > input {
+    height: 20px;
+    width: 50%;
+    border-radius: 6px;
+    border: 2px solid #500000;
+}
+
+#dueDateProj, #dueDateTask {
+    width: 16%;
+}
+
+.priority {
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 1.5fr 0.5fr 1.5fr 0.5fr 1.5fr 4fr ;
+}
+
+.locationCloseButton{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+.subtask {
+    background-color: #ae0606;
+
+    display: grid;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-columns: 1fr;
+    
+    gap: 15px; 
+}
+
+.headerTask {
+    
+    grid-row: 1 / 2;     /* esta linea se asocia al grid de subtask*/
+    
+color:#fff0f0;
+font-size: 1.5rem;
+text-transform: capitalize;
+display:flex;
+justify-content: space-between;
+
+}
+
+.hideButton{
+    grid-row: 3 / 4;     /* esta linea se asocia al grid de subtask*/
+    padding-left: 15px;
+}
+
+.tasksContainer{
+    
+    grid-row: 2 / 3;     /* esta linea se asocia al grid de subtask*/
+
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px; 
+
+}
+
+.eachTask {
+
+    background-color: white;
+    
+    color:#500000;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding-left: 5px;
+}
+
+.divDeleteButton {
+    
+    display:flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+
+}
+
+.imagen {
+
+	width: 50px;
+	height: 50px;
+	padding: 3px 3px;
+	border-radius: 60px;
+}
+
+    .btn {
+        /* boton mostrar y ocultar tareas */
+    color: #500000; font-size: 16px; line-height: 16px; padding: 6px; border-radius: 10px; 
+    font-family: Georgia, serif; font-weight: normal; text-decoration: none; font-style: normal; 
+    font-variant: normal; text-transform: none; box-shadow: #ae0606 2px 2px 2px 2px; 
+    background: white;
+    border: 2px solid #500000;}
+    .btn:hover {
+    color:#fff0f0;
+    background: #ae0606; }
+    .btn:active {
+    color:#ae0606;
+    background: #fff0f0; }
+
+        .btn2 {
+            /* boton CLOSE and submit */
+        width: 80px;
+        color: white; font-size: 16px; line-height: 16px; padding: 6px; border-radius: 10px; 
+        font-family: Georgia, serif; font-weight: normal; text-decoration: none; font-style: normal; 
+        font-variant: normal; text-transform: none; box-shadow: #fff0f0 2px 2px 2px 2px; 
+        background: #500000;
+        border: 2px solid #ae0606;}
+        .btn2:hover {
+        color:#fff0f0;
+        background: #ae0606; }
+        .btn2:active {
+        color:#ae0606;
+        background: #fff0f0; }
+
+        .btn3 {
+            /* boton DELETE */
+        width: 80px;
+        color: white; font-size: 16px; line-height: 16px; padding: 6px; border-radius: 10px; 
+        font-family: Georgia, serif; font-weight: normal; text-decoration: none; font-style: normal; 
+        font-variant: normal; text-transform: none; box-shadow: #fff0f0 2px 2px 2px 2px; 
+        background: #ae0606;
+        border: 2px solid #500000;}
+        .btn3:hover {
+        color:#500000;
+        background: #fff0f0; }
+        .btn3:active {
+        color:#500000;
+        background: white; }
+
+        .btn4 {
+            /* boton Today */
+        color: #fff0f0; font-size: 16px; line-height: 16px; padding: 6px; border-radius: 10px; 
+        font-family: Georgia, serif; font-weight: normal; text-decoration: none; font-style: normal; 
+        font-variant: normal; text-transform: none; box-shadow: #fff0f0 2px 2px 2px 2px; 
+        background: #ae0606;
+        border: 2px solid #500000;}
+        .btn4:hover {
+        color:#500000;
+        background: white; }
+        .btn4:active {
+        color:#500000;
+        background: #fff0f0; }
+
+
+
+
+
+
+.mostrar {
+    display: grid;
+}
+
+.ocultar {
+    display:none;
+}
